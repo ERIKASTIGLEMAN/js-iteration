@@ -106,12 +106,15 @@ const onlyTheEvenIndexedSurvive = numbers => {
  * }
  *
  * NOTE: You may *not* use the `forEach` or `for` method.
- *
-//
+ */
 
-const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((movie.score > 90 && movies.year === matchingYear).map(movie.name)}
+const bestMoviesOfTheYear = (movies, year) => {
+  const nameOfMovie = movies
+    .filter(movie => movie.score > 90 && movie.year === year)
+    .map(nameOfMovie => nameOfMovie.name)
 
-
+  return nameOfMovie
+}
 
 // ...
 
@@ -124,6 +127,11 @@ const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((mov
  *
  */
 
+const everyoneIsOdd = numbers => {
+  allOdds = numbers.every(number => number % 2 != 0)
+  return allOdds
+}
+
 // ...
 
 /*
@@ -134,6 +142,11 @@ const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((mov
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+
+const findTheNeedle = stringNeedles => {
+  needleFound = stringNeedles.find(string => string.includes('needle'))
+  return needleFound
+}
 
 // ...
 
@@ -146,6 +159,10 @@ const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((mov
  *
  */
 
+const findTheNeedleIndex = stringNeedles => {
+  return stringNeedles.findIndex(string => string.includes('needle'))
+}
+
 // ...
 
 /*
@@ -156,6 +173,9 @@ const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((mov
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const someoneToLove = strings => {
+  return strings.some(string => string.length === 4)
+}
 
 // ...
 
@@ -190,11 +210,23 @@ const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((mov
  *
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
+ *
+ * didn't understand either of these???
  */
 
-// function objectKeys(objectOfHobbies) {
-//   // Your code here
-// }
+function objectKeys(objectOfHobbies) {
+  // Showing the Object.Keys Way
+  // const keys = Object.keys(objectOfHobbies)
+  // const answer = keys.map(key => {
+  //   const hobby = objectOfHobbies[key]
+  //   return `${key} - ${hobby.title}`
+  // })
+  // Showing the Object.Entries Way
+  const answer = Object.entries(objectOfHobbies).map(
+    ([key, value]) => `${key} - ${value.title}`
+  )
+  return answer
+}
 
 // ...
 
