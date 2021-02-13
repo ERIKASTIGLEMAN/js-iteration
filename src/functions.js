@@ -23,9 +23,7 @@
  *
  */
 
-const yelling = words => {
-  // Your code here
-}
+const yelling = words => words.map(word => word.toUpperCase())
 
 /**
  *
@@ -36,6 +34,13 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+
+const doubleTrouble = function(numbers) {
+  const newDoubled = numbers.map(function(number) {
+    return number * 2
+  })
+  return newDoubled
+}
 
 // ...
 
@@ -48,6 +53,13 @@ const yelling = words => {
  *
  */
 
+const stringyIndexes = strings => {
+  indexPosition = strings.map(
+    (string, index) => `${string} is at index ${index}`
+  )
+  return indexPosition
+}
+
 // ...
 
 /*
@@ -58,6 +70,11 @@ const yelling = words => {
  *
  */
 
+const onlyTheEvenSurvive = numbers => {
+  evenNumbers = numbers.filter(number => number % 2 === 0)
+  return evenNumbers
+}
+
 // ...
 
 /*
@@ -67,6 +84,11 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+
+const onlyTheEvenIndexedSurvive = numbers => {
+  evenIndexNumbers = numbers.filter((number, index) => index % 2 === 0)
+  return evenIndexNumbers
+}
 
 // ...
 
@@ -85,7 +107,11 @@ const yelling = words => {
  *
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
- */
+//
+
+const bestMoviesOfTheYear = (movies, matchingYear) => {return movies.filter((movie.score > 90 && movies.year === matchingYear).map(movie.name)}
+
+
 
 // ...
 
